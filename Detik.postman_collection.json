@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "97449293-0a65-4ee4-921a-9a1ca3c0eae3",
+		"name": "Detik",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE PAYMENT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "ASDJK12328ASDVHVASD91ASJASD",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "invoice_id",
+							"value": "ASD324832",
+							"type": "text"
+						},
+						{
+							"key": "item_name",
+							"value": "MIE ",
+							"type": "text"
+						},
+						{
+							"key": "payment_type",
+							"value": "VA",
+							"type": "text"
+						},
+						{
+							"key": "customer_name",
+							"value": "rozaq",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "merchant_id",
+							"value": "D23",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/create_payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"create_payment"
+					]
+				},
+				"description": "Create_transaction"
+			},
+			"response": []
+		},
+		{
+			"name": "GET PAYMENT STATUS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "ASDJK12328ASDVHVASD91ASJASD",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "references_id",
+							"value": "16341095821250",
+							"type": "text"
+						},
+						{
+							"key": "merchant_id",
+							"value": "D23",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/get_payment_status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"get_payment_status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
